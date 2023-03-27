@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    background-image: linear-gradient(135deg,  hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    
+}
+
+.left {
+    width: 58%;
+    padding: 0 12%;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-size: cover;
+    
+}
+
+.inner-box {
+    max-width: 500px;
+}
+
+.right {
+    width: 42%;
+    background-image: url("../images/hero-desktop.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo-desktop {
+    margin: 60px 0;
+    width: 170px;
+}
+.mobile-img {
+    display: none;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+    letter-spacing: 14px;
+    line-height: 1.1;
+    color: hsl(0, 6%, 24%);
+    
+}
+
+h1 span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 200;
+    
+    
+}
+p {
+    color: hsl(0, 36%, 70%);
+    letter-spacing: 1px;
+    line-height: 1.8;
+    position: relative;
+    bottom: 30px;
+}
+
+form {
+    position: relative;
+    /* width: 550px; */
+}
+
+
+input {
+    width: 85%;
+    border-radius: 50px 0 0 50px;
+    padding: 20px 30px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid hsl(0, 5%, 80%);
+    border-right: none;
+    height: 55px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px hsla(0, 36%, 70%,0.6);
+}
+
+input::placeholder {
+    color: hsl(0, 5%, 80%);
+}
+
+/* email is not valid */
+
+form.error input {
+    border: 2px solid hsl(0, 93%, 68%);
+    border-right: none;
+}
+
+/* Email is a valid */
+
+form.success input {
+    border: 2px solid green;
+    border-right: none;
+}
+button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    z-index: 1;
+    padding: 15px;
+    width: 100px;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 55px;
+}
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    box-shadow: 2px 5px 15px hsla(0, 36%, 70%,0.6);
+    transition: opacity 0.2s ease;
+    
+}   
+
+.error-img {
+    position: absolute;
+    top: 15px;
+    right: 130px;
+    width: 20px;
+    display: none;
+}
+.success-img {
+    position: absolute;
+    right: 120px;
+    top: 13px;
+    background-color: green;
+    border-radius: 50%;
+    padding: 1.5px;
+    color: #fff;
+    display: none;
+}
+
+form small {
+    padding-left: 30px;
+    display: none;
+    margin-top: 15px;
+    color: hsl(0, 93%, 68%);
+}
+
+form.error .error-img {
+    display: block;
+}
+
+form.error small {
+    display: block;
+}
+
+form.success .success-img {
+    display: block;
+}
+/* Media Queries */
+
+@media (max-width:600px) {
+    .logo-desktop {
+        width: 100px;
+        margin: 30px;
+        
+    }
+    .mobile-img {
+        display: block;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+    }
+    .left {
+        width: 100%;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 50px 0;
+
+    }
+    p {
+        text-align: center;
+        font-size: 13px;
+        padding: 0 18px;
+    }
+
+    form {
+        width: 90%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .right{
+        display: none;
+    }
+}
